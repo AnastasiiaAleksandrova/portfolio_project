@@ -1,0 +1,508 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Slabo 27px', serif;
+  background: white;
+  color: black;
+  overflow-x: hidden;
+}
+
+section {
+  width: 100vw;
+}
+
+/* INTRO SECTION
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.intro {
+  background: white;
+  padding: 150px 0;
+  height: 90vh;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+nav {
+  position: absolute;
+  right: 2em;
+  top: 2em
+}
+
+nav li {
+  display: inline-block;
+  padding: 1em;
+  margin: 0 1em 0 1em;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  font-size: 1.2em;
+}
+
+nav a::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  margin-top: 1.5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: .3s all;
+}
+
+nav a::before {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  margin-top: -0.3em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: .3s all;
+}
+
+nav li:hover a::after {
+  width: 100%;
+}
+
+nav li:hover a::before {
+  width: 100%;
+}
+
+#down {
+  border: solid black 4px;
+  font-size: 2em;
+  color: black;
+  border-radius: 3px;
+  padding: 0 1em 0 1em;
+  margin-top: 5em;
+  -webkit-animation: in .3s;
+}
+
+#down:hover i {
+  -webkit-animation: out .3s;
+}
+
+@-webkit-keyframes in {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes out {
+  0% {
+    -webkit-transform: rotate(360deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+.spb {
+  background-image: linear-gradient(black, white), url(./img/stpetersburg.original.jpg);
+  background-blend-mode: lighten;
+  height: 500px;
+  width: 100vw;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hel {
+  background-image: linear-gradient(black, white), url(./img/Helsinki-Travel_Massive.jpg);
+  background-blend-mode: lighten;
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.skills {
+  background-color: black;
+  color: white;
+  position: relative;
+}
+
+.wrapper {
+  margin: 0 20vw;
+  padding-bottom: 3em;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills p {
+  padding: 5em;
+  font-size: 1.2rem;
+}
+
+.skill {
+  display: flex;
+  justify-content: center;
+  margin: 1em 0;
+}
+
+.point {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  /* border: 1px solid white; */
+  background-color: rgb(79, 79, 79);
+  display: inline-block;
+  margin: 0 2px;
+}
+
+.skill_name {
+  width: 15em;
+  font-size: 1.2rem;
+}
+
+.skills::before {
+  position: absolute;
+  margin-top: -160px;
+  content: '';
+  border-style: solid;
+  border-width: 0 0 10rem 100vw;
+  border-color: transparent Black Black transparent;
+}
+
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.org {
+  font-size: 1.2rem;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.timeline ul {
+  background: black;
+  padding-bottom: 50px;
+}
+
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 3px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: rgb(92, 82, 96);
+}
+
+.timeline ul li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-45%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: inherit;
+}
+
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 15px;
+  background: white;
+  border-radius: 3px;
+}
+
+.timeline ul li div::before {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) div {
+  left: 45px;
+}
+
+.timeline ul li:nth-child(odd) div::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.timeline ul li:nth-child(even) div {
+  left: -439px;
+}
+
+.timeline ul li:nth-child(even) div::before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent white;
+}
+
+time {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+#edu {
+  color: white;
+  margin-left: 80vw;
+}
+
+#ex {
+  color: white;
+  margin-left: 80vw;
+}
+
+#skills {
+  margin-left: 80vw;
+}
+
+.timeline {
+  position: relative;
+}
+
+.education {
+  position: relative;
+}
+
+.work {
+  position: relative;
+}
+
+.education::before {
+  position: absolute;
+  margin-top: -160px;
+  content: '';
+  border-style: solid;
+  border-width: 0 0 10rem 100vw;
+  border-color: transparent Black Black transparent;
+}
+
+.work::before {
+  position: absolute;
+  margin-top: -160px;
+  content: '';
+  border-style: solid;
+  border-width: 0 0 10rem 100vw;
+  border-color: transparent Black Black transparent;
+}
+
+.contact {
+  height: 40vh;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  font-size: 1.2rem;
+}
+
+.contact p {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.inp {
+  padding: 5px;
+}
+
+.contact input {
+  display: block;
+  padding: 0.5em;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.contact textarea {
+  display: block;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 0.5em;
+}
+
+button {
+  font-family: 'Slabo 27px', serif;
+  font-size: 1em;
+  margin-bottom: 3em;
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  padding: 0.5em;
+  border-radius: 3px;
+}
+
+/* EFFECTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.timeline ul li::after {
+  transition: background .5s ease-in-out;
+}
+
+.timeline ul li {
+  transition: background .5s ease-in-out;
+}
+
+.timeline ul li.in-view {
+  background: white;
+}
+
+.timeline ul li.in-view::after {
+  background: white;
+}
+
+.timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.timeline ul li:nth-child(odd) div {
+  transform: translateX(-600px);
+}
+
+.timeline ul li:nth-child(even) div {
+  transform: translateX(600px);
+}
+
+.timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 600px) {
+  #edu {
+    color: white;
+    margin-left: 60vw;
+  }
+
+  #ex {
+    color: white;
+    margin-left: 40vw;
+  }
+
+  #skills {
+    margin-left: 70vw;
+  }
+
+  body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .intro {
+    max-width: 50em;
+    text-align: center;
+  }
+
+  .intro h1 {
+    margin: 0 5vw 1em 5vw;
+  }
+
+  #down {
+    position: absolute;
+    top: 10em;
+    left: 3.5em;
+  }
+
+  .skill {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .point {
+    width: .6em;
+    height: .6em;
+  }
+
+  nav {
+    position: relative;
+    margin-top: -10em;
+    margin-bottom: 5em;
+    margin-left: 5em;
+  }
+
+  nav li {
+    display: flex;
+    justify-content: center;
+  }
+
+  h1 {
+    margin-bottom: 15em;
+  }
+
+  .timeline {
+    margin-top: 10em;
+    overflow: hidden;
+  }
+
+  .timeline ul li {
+    margin-left: 20px;
+  }
+
+  .timeline ul li div {
+    width: calc(100vw - 91px);
+  }
+
+  .timeline ul li:nth-child(even) div {
+    left: 45px;
+  }
+
+  .timeline ul li:nth-child(even) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent white transparent transparent;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .timeline ul li div {
+    width: 250px;
+  }
+
+  .timeline ul li:nth-child(even) div {
+    left: -289px;
+    /*250+45-6*/
+  }
+
+  .point {
+    width: .5em;
+    height: .5em;
+  }
+
+  .intro {
+    max-width: 10em;
+    text-align: center;
+  }
+}
