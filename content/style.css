@@ -20,21 +20,15 @@ section {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .intro {
   background: white;
-  padding: 150px 0;
+  padding: 1em 0;
   height: 90vh;
   margin: 0 auto;
   text-align: center;
-  position: relative;
+  
 }
 
 h1 {
   font-size: 2.5rem;
-}
-
-nav {
-  position: absolute;
-  right: 2em;
-  top: 2em
 }
 
 nav li {
@@ -85,38 +79,25 @@ nav li:hover a::before {
   width: 100%;
 }
 
+#intro_text {
+  margin-top: 2em;
+}
+
 #down {
   border: solid black 4px;
   font-size: 2em;
   color: black;
-  border-radius: 3px;
+  border-radius: 3.5px;
   padding: 0 1em 0 1em;
-  margin-top: 5em;
-  -webkit-animation: in .3s;
 }
 
-#down:hover i {
-  -webkit-animation: out .3s;
+#down:hover {
+  color: rgb(49, 45, 71);
+  border-color: rgb(49, 45, 71);
 }
 
-@-webkit-keyframes in {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-
-  to {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes out {
-  0% {
-    -webkit-transform: rotate(360deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(0deg);
-  }
+#arrow_container {
+  margin-top: 3em;
 }
 
 .spb {
@@ -169,7 +150,7 @@ nav li:hover a::before {
   height: 1.5em;
   border-radius: 50%;
   /* border: 1px solid white; */
-  background-color: rgb(79, 79, 79);
+  background-color:rgb(49, 45, 71);
   display: inline-block;
   margin: 0 2px;
 }
@@ -356,6 +337,11 @@ button {
   border-radius: 3px;
 }
 
+button:hover {
+  background-color: rgb(49, 45, 71);
+  border-color: rgb(49, 45, 71);
+}
+
 /* EFFECTS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .timeline ul li::after {
@@ -397,65 +383,13 @@ button {
 /* MEDIA QUERIES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media screen and (max-width: 600px) {
-  #edu {
-    color: white;
-    margin-left: 60vw;
-  }
-
-  #ex {
-    color: white;
-    margin-left: 40vw;
-  }
-
-  #skills {
-    margin-left: 70vw;
-  }
-
-  body {
-    width: 100vw;
-    overflow-x: hidden;
-  }
-
-  .intro {
-    max-width: 50em;
-    text-align: center;
-  }
-
-  .intro h1 {
-    margin: 0 5vw 1em 5vw;
-  }
-
-  #down {
-    position: absolute;
-    top: 10em;
-    left: 3.5em;
-  }
-
-  .skill {
-    display: flex;
-    flex-direction: column;
-  }
+ 
 
   .point {
     width: .6em;
     height: .6em;
   }
 
-  nav {
-    position: relative;
-    margin-top: -10em;
-    margin-bottom: 5em;
-    margin-left: 5em;
-  }
-
-  nav li {
-    display: flex;
-    justify-content: center;
-  }
-
-  h1 {
-    margin-bottom: 15em;
-  }
 
   .timeline {
     margin-top: 10em;
@@ -482,10 +416,7 @@ button {
 }
 
 @media screen and (min-width: 601px) and (max-width: 900px) {
-  body {
-    width: 100vw;
-    overflow-x: hidden;
-  }
+ 
 
   .timeline ul li div {
     width: 250px;
@@ -493,7 +424,6 @@ button {
 
   .timeline ul li:nth-child(even) div {
     left: -289px;
-    /*250+45-6*/
   }
 
   .point {
@@ -501,8 +431,5 @@ button {
     height: .5em;
   }
 
-  .intro {
-    max-width: 10em;
-    text-align: center;
-  }
+  
 }
