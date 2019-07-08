@@ -1,6 +1,7 @@
 const express = require('express')
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
+const PORT = process.env.port || 3000;
 
 
 const app = express();
@@ -43,4 +44,4 @@ app.post('/send-email', (req, res) => {
 })
 
 
-app.listen(3000, () => console.log('server is listerning'))
+app.listen(PORT, () => console.log('server is on'))
