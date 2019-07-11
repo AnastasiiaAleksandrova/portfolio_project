@@ -437,6 +437,35 @@ button:active {
     display: none;
   }
 
+  .education::before {
+    
+    display: none;
+    
+  }
+
+
+
+ .intro {
+   height: 40vh;
+ }
+
+  nav {
+    display: none;
+  }
+
+  h2 {
+    padding-top: 1em;
+    
+  }
+
+  #edu, #ex, #skills {
+    margin-left: 60vw;
+  }
+
+  #skills {
+    padding-bottom: 1em;
+  }
+
 
   .timeline {
     margin-top: 10em;
