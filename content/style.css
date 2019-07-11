@@ -6,10 +6,13 @@
 }
 
 body {
-  font-family: 'Slabo 27px', serif;
-  background: white;
-  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
+  background-color: white;
+  color: #3F4356;
+  scrollbar-width: none;
   overflow-x: hidden;
+  
 }
 
 section {
@@ -29,6 +32,7 @@ section {
 
 h1 {
   font-size: 2.5rem;
+  font-weight: lighter;
 }
 
 nav li {
@@ -38,24 +42,34 @@ nav li {
 }
 
 nav a {
-  color: black;
+  color: #3F4356;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: lighter;
   position: relative;
   font-size: 1.2em;
 }
 
-nav a::after {
+nav a:hover {
+  color: #D53027;
+  transition: .3s all;
+}
+
+h2 {
+  font-weight: lighter;
+}
+
+/* nav a::after {
   content: '';
   display: inline-block;
   width: 0;
   height: 2px;
-  background-color: black;
+  background-color: #D53027;
   margin-top: 1.5em;
   position: absolute;
   top: 0;
   left: 0;
   transition: .3s all;
+  
 }
 
 nav a::before {
@@ -63,12 +77,13 @@ nav a::before {
   display: inline-block;
   width: 0;
   height: 2px;
-  background-color: black;
+  background-color: #D53027;
   margin-top: -0.3em;
   position: absolute;
   top: 0;
   right: 0;
   transition: .3s all;
+  
 }
 
 nav li:hover a::after {
@@ -77,32 +92,40 @@ nav li:hover a::after {
 
 nav li:hover a::before {
   width: 100%;
-}
+} */
 
 #intro_text {
-  margin-top: 2em;
+  margin-top: 10vh;
 }
 
 #down {
-  border: solid black 4px;
+  border: solid #3F4356 3px;
   font-size: 2em;
-  color: black;
+  font-weight: lighter;
+  color: #3F4356;
   border-radius: 3.5px;
   padding: 0 1em 0 1em;
 }
 
 #down:hover {
-  color: rgb(49, 45, 71);
-  border-color: rgb(49, 45, 71);
+  color: #D53027;
+  border-color: #D53027;
+  cursor: pointer;
+  transition: .3s all;
 }
 
+/* #down:active {
+  color: rgb(49, 45, 71);
+  border-color: rgb(49, 45, 71);
+} */
+
 #arrow_container {
-  margin-top: 3em;
+  margin-top: 7vh;
 }
 
 .spb {
-  background-image: linear-gradient(black, white), url(./img/stpetersburg.original.jpg);
-  background-blend-mode: lighten;
+  background-image: url(./img/river.jpg);
+ 
   height: 500px;
   width: 100vw;
   background-attachment: fixed;
@@ -112,17 +135,19 @@ nav li:hover a::before {
 }
 
 .hel {
-  background-image: linear-gradient(black, white), url(./img/Helsinki-Travel_Massive.jpg);
-  background-blend-mode: lighten;
+  
+  background-image: url(./img/harbor.jpg);
+  
   height: 500px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
+  margin-top: -2em;
 }
 
 .skills {
-  background-color: black;
+  background-color: #3F4356;
   color: white;
   position: relative;
 }
@@ -150,7 +175,7 @@ nav li:hover a::before {
   height: 1.5em;
   border-radius: 50%;
   /* border: 1px solid white; */
-  background-color:rgb(49, 45, 71);
+  background-color: #747C93;
   display: inline-block;
   margin: 0 2px;
 }
@@ -166,7 +191,7 @@ nav li:hover a::before {
   content: '';
   border-style: solid;
   border-width: 0 0 10rem 100vw;
-  border-color: transparent Black Black transparent;
+  border-color: transparent #3F4356 #3F4356 transparent;
 }
 
 /* TIMELINE
@@ -180,14 +205,14 @@ nav li:hover a::before {
 }
 
 .timeline ul {
-  background: black;
+  background: #3F4356;
   padding-bottom: 50px;
 }
 
 .timeline ul li {
   list-style-type: none;
   position: relative;
-  width: 3px;
+  width: 2px;
   margin: 0 auto;
   padding-top: 50px;
   background: rgb(92, 82, 96);
@@ -281,7 +306,7 @@ time {
   content: '';
   border-style: solid;
   border-width: 0 0 10rem 100vw;
-  border-color: transparent Black Black transparent;
+  border-color: transparent #3F4356 #3F4356 transparent;
 }
 
 .work::before {
@@ -290,16 +315,16 @@ time {
   content: '';
   border-style: solid;
   border-width: 0 0 10rem 100vw;
-  border-color: transparent Black Black transparent;
+  border-color: transparent #3F4356 #3F4356 transparent;
 }
 
 .contact {
   height: 40vh;
   background-color: white;
-  color: black;
+  color: #3F4356;
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+  padding: 60px 0;
   font-size: 1.2rem;
 }
 
@@ -315,13 +340,13 @@ time {
 .contact input {
   display: block;
   padding: 0.5em;
-  border: 1px solid black;
+  border: 1px solid #3F4356;
   border-radius: 3px;
 }
 
 .contact textarea {
   display: block;
-  border: 1px solid black;
+  border: 1px solid #3F4356;
   border-radius: 3px;
   padding: 0.5em;
 }
@@ -331,17 +356,24 @@ button {
   font-size: 1em;
   margin-bottom: 3em;
   color: white;
-  background-color: black;
-  border: 1px solid black;
+  background-color: #3F4356;
+  border: 1px solid #3F4356;
   padding: 0.5em;
   border-radius: 3px;
 }
 
 button:hover {
-  background-color: rgb(49, 45, 71);
-  border-color: rgb(49, 45, 71);
+  
+  background-color: #D53027;
+  border-color: #D53027;
+  cursor: pointer;
+  transition: .3s all;
 }
 
+button:active {
+  
+  outline: none;
+}
 /* EFFECTS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .timeline ul li::after {
@@ -353,11 +385,11 @@ button:hover {
 }
 
 .timeline ul li.in-view {
-  background: white;
+  background: #D53027;
 }
 
 .timeline ul li.in-view::after {
-  background: white;
+  background: #D53027;
 }
 
 .timeline ul li div {
@@ -384,16 +416,31 @@ button:hover {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media screen and (max-width: 600px) {
  
-
   .point {
     width: .6em;
     height: .6em;
   }
 
+  .spb {
+    display: none;
+  }
+
+  .hel {
+    display: none;
+  }
+
+  .work::before {
+    display: none;
+  }
+
+  .skills::before {
+    display: none;
+  }
+
 
   .timeline {
     margin-top: 10em;
-    overflow: hidden;
+    overflow-x: hidden;
   }
 
   .timeline ul li {
@@ -420,6 +467,22 @@ button:hover {
 
   .timeline ul li div {
     width: 250px;
+  }
+
+  .skills::before {
+    display: none;
+  }
+
+  .work::before {
+    display: none;
+  }
+
+  .spb {
+    display: none;
+  }
+
+  .hel {
+    display: none;
   }
 
   .timeline ul li:nth-child(even) div {
