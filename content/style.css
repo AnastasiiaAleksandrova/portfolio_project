@@ -496,7 +496,28 @@ button:active {
 }
 
 @media screen and (min-width: 601px) and (max-width: 900px) {
- 
+  .work::before {
+    display: none;
+  }
+
+  .skills::before {
+    display: none;
+  }
+
+  .skill {
+    display: block;
+  }
+
+  .education::before {
+    
+    display: none;
+    
+  }
+
+  h2 {
+    padding-top: 1em;
+    
+  }
 
   .timeline ul li div {
     width: 250px;
