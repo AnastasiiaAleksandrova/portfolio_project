@@ -437,6 +437,10 @@ button:active {
     display: none;
   }
 
+  .skill {
+    display: block;
+  }
+
   .education::before {
     
     display: none;
