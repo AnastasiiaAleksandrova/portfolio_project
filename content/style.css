@@ -24,7 +24,7 @@ section {
 .intro {
   background: white;
   padding: 1em 0;
-  height: 90vh;
+  height: 35em;
   margin: 0 auto;
   text-align: center;
   
@@ -449,9 +449,7 @@ button:active {
 
 
 
- .intro {
-   height: 60vh;
- }
+ 
 
   nav {
     display: none;
