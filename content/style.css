@@ -25,7 +25,7 @@ section {
   background: white;
   padding: 1em 0;
   height: 35em;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   text-align: center;
   
 }
@@ -44,21 +44,17 @@ nav li {
 nav a {
   color: #3F4356;
   text-decoration: none;
-  font-weight: lighter;
+  /* font-weight: lighter; */
   position: relative;
   font-size: 1.2em;
 }
 
-nav a:hover {
-  color: #D53027;
-  transition: .3s all;
-}
 
 h2 {
   font-weight: lighter;
 }
 
-/* nav a::after {
+nav a::after {
   content: '';
   display: inline-block;
   width: 0;
@@ -92,7 +88,7 @@ nav li:hover a::after {
 
 nav li:hover a::before {
   width: 100%;
-} */
+}
 
 #intro_text {
   margin-top: 10vh;

@@ -4,7 +4,7 @@ let points = document.getElementsByClassName("points");
 function fillRow(rowNumber, stop) {
   let row = points[rowNumber];
   if (isElementInViewport(row)) {
-    let rowPoints = row.childNodes;
+    
     let j = 0;
     let time = setInterval(function() {
       j++;
