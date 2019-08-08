@@ -2,18 +2,22 @@ const express = require('express')
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
+const multer = require('multer');
+const upload = multer();
 
 
 const app = express();
 
 app.use(express.static('content'))
 
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
 app.use(bodyParser.json());
 
-app.post('/send-email', (req, res) => {
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
+
+app.post('/send-email', upload.none(), (req, res) => {
+  console.log(req.body);
   let transporter = nodemailer.createTransport({
     host: "smtp.mailtrap.io",
     port: 2525,
@@ -35,12 +39,12 @@ app.post('/send-email', (req, res) => {
       console.log(error);
     } else {
       console.log('Email sent: ' + info.response);
+      
     }
   });
+  
+  res.end();
 
-  res.send('<p>Your message has been sent :)</p><a href=\' / \'>Go back to page</a>')
-
-  // res.redirect('back')
 })
 
 

@@ -370,6 +370,11 @@ button:active {
   
   outline: none;
 }
+
+button:disabled {
+  background-color: #747C93;
+  border: none;
+}
 /* EFFECTS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .timeline ul li::after {
