@@ -12,7 +12,6 @@ body {
   color: #3F4356;
   scrollbar-width: none;
   overflow-x: hidden;
-  
 }
 
 section {
@@ -25,13 +24,15 @@ section {
   background: white;
   padding: 1em 0;
   height: 35em;
-  /* margin: 0 auto; */
   text-align: center;
-  
 }
 
 h1 {
   font-size: 2.5rem;
+  font-weight: lighter;
+}
+
+h2 {
   font-weight: lighter;
 }
 
@@ -41,17 +42,11 @@ nav li {
   margin: 0 1em 0 1em;
 }
 
-nav a {
+a {
   color: #3F4356;
   text-decoration: none;
-  /* font-weight: lighter; */
   position: relative;
   font-size: 1.2em;
-}
-
-
-h2 {
-  font-weight: lighter;
 }
 
 nav a::after {
@@ -65,7 +60,6 @@ nav a::after {
   top: 0;
   left: 0;
   transition: .3s all;
-  
 }
 
 nav a::before {
@@ -79,7 +73,6 @@ nav a::before {
   top: 0;
   right: 0;
   transition: .3s all;
-  
 }
 
 nav li:hover a::after {
@@ -110,78 +103,21 @@ nav li:hover a::before {
   transition: .3s all;
 }
 
-/* #down:active {
-  color: rgb(49, 45, 71);
-  border-color: rgb(49, 45, 71);
-} */
 
 #arrow_container {
   margin-top: 7vh;
 }
 
-.spb {
-  background-image: url(./img/fall.jpg);
- 
-  height: 500px;
-  width: 100vw;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
-.hel {
-  
-  background-image: url(./img/harbor.jpg);
-  
-  height: 500px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  margin-top: -2em;
-}
-
-.skills {
-  background-color: #3F4356;
-  color: white;
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.timeline {
+  background: #3F4356;
   position: relative;
+  padding-bottom: 7em;
 }
 
-.wrapper {
-  margin: 0 20vw;
-  padding-bottom: 3em;
-  display: flex;
-  flex-direction: column;
-}
-
-.skills p {
-  padding: 5em;
-  font-size: 1.2rem;
-}
-
-.skill {
-  display: flex;
-  justify-content: center;
-  margin: 1em 0;
-}
-
-.point {
-  width: 1.5em;
-  height: 1.5em;
-  border-radius: 50%;
-  /* border: 1px solid white; */
-  background-color: #747C93;
-  display: inline-block;
-  margin: 0 2px;
-}
-
-.skill_name {
-  width: 15em;
-  font-size: 1.2rem;
-}
-
-.skills::before {
+.timeline::before {
   position: absolute;
   margin-top: -160px;
   content: '';
@@ -190,8 +126,6 @@ nav li:hover a::before {
   border-color: transparent #3F4356 #3F4356 transparent;
 }
 
-/* TIMELINE
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .org {
   font-size: 1.2rem;
 }
@@ -201,7 +135,7 @@ nav li:hover a::before {
 }
 
 .timeline ul {
-  background: #3F4356;
+  
   padding-bottom: 50px;
 }
 
@@ -280,39 +214,70 @@ time {
   margin-left: 80vw;
 }
 
+/* SKILLS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 #skills {
   margin-left: 80vw;
 }
 
-.timeline {
+.skills {
+  background-color: white;
+  color:  #3F4356;
   position: relative;
 }
 
-.education {
-  position: relative;
-}
-
-.work {
-  position: relative;
-}
-
-.education::before {
+.skills::before {
   position: absolute;
   margin-top: -160px;
   content: '';
   border-style: solid;
   border-width: 0 0 10rem 100vw;
-  border-color: transparent #3F4356 #3F4356 transparent;
+  border-color: transparent white white transparent;
 }
 
-.work::before {
-  position: absolute;
-  margin-top: -160px;
-  content: '';
-  border-style: solid;
-  border-width: 0 0 10rem 100vw;
-  border-color: transparent #3F4356 #3F4356 transparent;
+.wrapper {
+  margin: 0 20vw;
+  padding-bottom: 3em;
+  display: flex;
+  flex-direction: column;
 }
+
+.skills p {
+  padding: 5em;
+  font-size: 1.2rem;
+ 
+}
+
+.skill {
+  display: flex;
+  justify-content: center;
+  margin: 1em 0;
+}
+
+.fa-html5, .fa-css3-alt, .fa-js, .fa-react, .fa-node {
+  font-size: 2em;
+  margin-right: 0.5em;
+}
+
+.point {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background-color: rgb(181, 184, 194);
+  display: inline-block;
+  margin: 0 2px;
+}
+
+.skill_name {
+  width: 15em;
+  font-size: 1.2em;
+  
+}
+
+
+/* CONTACT FORM
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .contact {
   height: 40vh;
@@ -375,6 +340,7 @@ button:disabled {
   background-color: #747C93;
   border: none;
 }
+
 /* EFFECTS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .timeline ul li::after {
@@ -422,43 +388,20 @@ button:disabled {
     height: .6em;
   }
 
-  .spb {
-    display: none;
-  }
-
-  .hel {
-    display: none;
-  }
-
-  .work::before {
-    display: none;
-  }
-
-  .skills::before {
-    display: none;
-  }
-
   .skill {
     display: block;
   }
 
-  .education::before {
-    
+  .timeline::before {
     display: none;
-    
   }
-
-
-
- 
 
   nav {
     display: none;
   }
 
   h2 {
-    padding-top: 1em;
-    
+    padding-top: 1em; 
   }
 
   #edu, #ex, #skills {
@@ -495,48 +438,24 @@ button:disabled {
 }
 
 @media screen and (min-width: 601px) and (max-width: 900px) {
-  .work::before {
-    display: none;
-  }
-
-  .skills::before {
-    display: none;
-  }
+  
 
   .skill {
     display: block;
   }
 
-  .education::before {
-    
+  .timeline::before {
     display: none;
-    
   }
 
   h2 {
     padding-top: 1em;
-    
   }
 
   .timeline ul li div {
     width: 250px;
   }
 
-  .skills::before {
-    display: none;
-  }
-
-  .work::before {
-    display: none;
-  }
-
-  .spb {
-    display: none;
-  }
-
-  .hel {
-    display: none;
-  }
 
   .timeline ul li:nth-child(even) div {
     left: -289px;

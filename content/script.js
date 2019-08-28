@@ -12,7 +12,7 @@ function fillRow(rowNumber, stop) {
         clearInterval(time);
       }
       if (row.childNodes[j].nodeType == 1) {
-        row.childNodes[j].style.background = "white";
+        row.childNodes[j].style.background = "#3F4356";
       }
     }, 50);
   }
