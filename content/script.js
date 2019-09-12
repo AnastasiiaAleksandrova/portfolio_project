@@ -1,31 +1,4 @@
 let items = document.querySelectorAll(".timeline li");
-let points = document.getElementsByClassName("points");
-
-function fillRow(rowNumber, stop) {
-  let row = points[rowNumber];
-  if (isElementInViewport(row)) {
-    
-    let j = 0;
-    let time = setInterval(function() {
-      j++;
-      if (j == stop) {
-        clearInterval(time);
-      }
-      if (row.childNodes[j].nodeType == 1) {
-        row.childNodes[j].style.background = "#3F4356";
-      }
-    }, 50);
-  }
-}
-
-function fillSkills() {
-  fillRow(0, 18);
-  fillRow(1, 16);
-  fillRow(2, 14);
-  fillRow(3, 10);
-  fillRow(4, 6);
-  fillRow(5, 18);
-}
 
 function isElementInViewport(el) {
   let rect = el.getBoundingClientRect();
@@ -43,10 +16,9 @@ function callbackFunc() {
       items[i].classList.add("in-view");
     }
   }
-  fillSkills();
 }
 
-let form = document.getElementById("form");
+document.getElementById("form")
 
 form.addEventListener("submit", function sendData(event) {
   event.preventDefault();
@@ -74,13 +46,6 @@ form.addEventListener("submit", function sendData(event) {
     }
   })
 });
-
-
-
-  
-    
-
-
 
 
 window.addEventListener("load", callbackFunc);

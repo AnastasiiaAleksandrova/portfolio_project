@@ -8,126 +8,47 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: lighter;
-  background-color: white;
-  color: #3F4356;
   scrollbar-width: none;
   overflow-x: hidden;
+  color: #1C1D0A;
 }
 
 section {
   width: 100vw;
 }
 
+h2 {
+  text-align: center;
+  padding: 3%;
+}
+
+
 /* INTRO SECTION
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.intro {
-  background: white;
-  padding: 1em 0;
-  height: 35em;
+
+.jumbotron {
   text-align: center;
+  margin: 0;
+  background-color: #CED1D3;
 }
 
-h1 {
-  font-size: 2.5rem;
-  font-weight: lighter;
+.parallax {
+  background-image: url("img/fall.jpg");
+  height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
-h2 {
-  font-weight: lighter;
-}
-
-nav li {
-  display: inline-block;
-  padding: 1em;
-  margin: 0 1em 0 1em;
-}
-
-a {
-  color: #3F4356;
-  text-decoration: none;
-  position: relative;
-  font-size: 1.2em;
-}
-
-nav a::after {
-  content: '';
-  display: inline-block;
-  width: 0;
-  height: 2px;
-  background-color: #D53027;
-  margin-top: 1.5em;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: .3s all;
-}
-
-nav a::before {
-  content: '';
-  display: inline-block;
-  width: 0;
-  height: 2px;
-  background-color: #D53027;
-  margin-top: -0.3em;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transition: .3s all;
-}
-
-nav li:hover a::after {
-  width: 100%;
-}
-
-nav li:hover a::before {
-  width: 100%;
-}
-
-#intro_text {
-  margin-top: 10vh;
-}
-
-#down {
-  border: solid #3F4356 3px;
-  font-size: 2em;
-  font-weight: lighter;
-  color: #3F4356;
-  border-radius: 3.5px;
-  padding: 0 1em 0 1em;
-}
-
-#down:hover {
-  color: #D53027;
-  border-color: #D53027;
-  cursor: pointer;
-  transition: .3s all;
-}
-
-
-#arrow_container {
-  margin-top: 7vh;
-}
-
 
 /* TIMELINE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
 .timeline {
-  background: #3F4356;
-  position: relative;
-  padding-bottom: 7em;
-}
-
-.timeline::before {
-  position: absolute;
-  margin-top: -160px;
-  content: '';
-  border-style: solid;
-  border-width: 0 0 10rem 100vw;
-  border-color: transparent #3F4356 #3F4356 transparent;
-}
-
-.org {
-  font-size: 1.2rem;
+  background:white;
 }
 
 .title {
@@ -135,7 +56,6 @@ nav li:hover a::before {
 }
 
 .timeline ul {
-  
   padding-bottom: 50px;
 }
 
@@ -145,7 +65,7 @@ nav li:hover a::before {
   width: 2px;
   margin: 0 auto;
   padding-top: 50px;
-  background: rgb(92, 82, 96);
+  background: #CED1D3;
 }
 
 .timeline ul li::after {
@@ -164,7 +84,7 @@ nav li:hover a::before {
   bottom: 0;
   width: 400px;
   padding: 15px;
-  background: white;
+  background: #A3A5A4;
   border-radius: 3px;
 }
 
@@ -184,7 +104,7 @@ nav li:hover a::before {
 .timeline ul li:nth-child(odd) div::before {
   left: -15px;
   border-width: 8px 16px 8px 0;
-  border-color: transparent white transparent transparent;
+  border-color: transparent #A3A5A4 transparent transparent;
 }
 
 .timeline ul li:nth-child(even) div {
@@ -194,7 +114,7 @@ nav li:hover a::before {
 .timeline ul li:nth-child(even) div::before {
   right: -15px;
   border-width: 8px 0 8px 16px;
-  border-color: transparent transparent transparent white;
+  border-color: transparent transparent transparent #A3A5A4;
 }
 
 time {
@@ -204,55 +124,17 @@ time {
   margin-bottom: 8px;
 }
 
-#edu {
-  color: white;
-  margin-left: 80vw;
-}
-
-#ex {
-  color: white;
-  margin-left: 80vw;
-}
 
 /* SKILLS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-#skills {
-  margin-left: 80vw;
-}
-
 .skills {
-  background-color: white;
-  color:  #3F4356;
-  position: relative;
+  background: #CED1D3;
 }
 
-.skills::before {
-  position: absolute;
-  margin-top: -160px;
-  content: '';
-  border-style: solid;
-  border-width: 0 0 10rem 100vw;
-  border-color: transparent white white transparent;
-}
-
-.wrapper {
-  margin: 0 20vw;
-  padding-bottom: 3em;
-  display: flex;
-  flex-direction: column;
-}
-
-.skills p {
-  padding: 5em;
-  font-size: 1.2rem;
- 
-}
-
-.skill {
+.first, .second {
   display: flex;
   justify-content: center;
-  margin: 1em 0;
+
 }
 
 .fa-html5, .fa-css3-alt, .fa-js, .fa-react, .fa-node {
@@ -260,19 +142,28 @@ time {
   margin-right: 0.5em;
 }
 
-.point {
-  width: 1.5em;
-  height: 1.5em;
-  border-radius: 50%;
-  background-color: rgb(181, 184, 194);
-  display: inline-block;
-  margin: 0 2px;
+.skill_name {
+  font-size: 1.2em;
+  padding: 2rem;
 }
 
-.skill_name {
-  width: 15em;
-  font-size: 1.2em;
-  
+/* PROJECTS
+--------------------------------------------------*/
+.container {
+  padding: 3%;
+}
+
+.card-body {
+  background-color: #CED1D3;
+}
+
+.card-link {
+  font-weight: bold;
+  color: #1C1D0A;
+}
+
+.card-link:hover {
+  color: #53472E;
 }
 
 
@@ -280,18 +171,13 @@ time {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .contact {
-  height: 40vh;
-  background-color: white;
-  color: #3F4356;
+  background-color:#CED1D3;
   display: flex;
   justify-content: center;
-  padding: 60px 0;
-  font-size: 1.2rem;
 }
 
-.contact p {
-  font-weight: bold;
-  font-size: 1.2rem;
+#contact {
+  padding: 3%;
 }
 
 .inp {
@@ -301,43 +187,41 @@ time {
 .contact input {
   display: block;
   padding: 0.5em;
-  border: 1px solid #3F4356;
+  border: 1px solid #1C1D0A;
   border-radius: 3px;
 }
 
 .contact textarea {
   display: block;
-  border: 1px solid #3F4356;
+  border: 1px solid #1C1D0A;
   border-radius: 3px;
   padding: 0.5em;
 }
 
-button {
+.submit {
   font-family: 'Slabo 27px', serif;
   font-size: 1em;
   margin-bottom: 3em;
   color: white;
-  background-color: #3F4356;
-  border: 1px solid #3F4356;
+  background-color: #1C1D0A;
+  border: 1px solid #1C1D0A;
   padding: 0.5em;
   border-radius: 3px;
 }
 
-button:hover {
-  
-  background-color: #D53027;
-  border-color: #D53027;
+.submit:hover {
   cursor: pointer;
-  transition: .3s all;
+  background-color: #53472E;
+  border: 1px solid #53472E;
+  
 }
 
-button:active {
-  
+.submit:active {
   outline: none;
 }
 
-button:disabled {
-  background-color: #747C93;
+.submit:disabled {
+  background-color: #A3A5A4;
   border: none;
 }
 
@@ -352,11 +236,11 @@ button:disabled {
 }
 
 .timeline ul li.in-view {
-  background: #D53027;
+  background:#A3A5A4;
 }
 
 .timeline ul li.in-view::after {
-  background: #D53027;
+  background: #A3A5A4;
 }
 
 .timeline ul li div {
@@ -382,35 +266,6 @@ button:disabled {
 /* MEDIA QUERIES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media screen and (max-width: 600px) {
- 
-  .point {
-    width: .6em;
-    height: .6em;
-  }
-
-  .skill {
-    display: block;
-  }
-
-  .timeline::before {
-    display: none;
-  }
-
-  nav {
-    display: none;
-  }
-
-  h2 {
-    padding-top: 1em; 
-  }
-
-  #edu, #ex, #skills {
-    margin-left: 60vw;
-  }
-
-  #skills {
-    padding-bottom: 1em;
-  }
 
 
   .timeline {
@@ -433,24 +288,17 @@ button:disabled {
   .timeline ul li:nth-child(even) div::before {
     left: -15px;
     border-width: 8px 16px 8px 0;
-    border-color: transparent white transparent transparent;
+    border-color: transparent #A3A5A4 transparent transparent;
   }
 }
 
 @media screen and (min-width: 601px) and (max-width: 900px) {
   
 
-  .skill {
-    display: block;
-  }
-
   .timeline::before {
     display: none;
   }
 
-  h2 {
-    padding-top: 1em;
-  }
 
   .timeline ul li div {
     width: 250px;
@@ -459,12 +307,5 @@ button:disabled {
 
   .timeline ul li:nth-child(even) div {
     left: -289px;
-  }
-
-  .point {
-    width: .5em;
-    height: .5em;
-  }
-
-  
+  }  
 }
