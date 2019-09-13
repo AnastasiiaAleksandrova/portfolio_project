@@ -153,9 +153,6 @@ time {
   padding: 3%;
 }
 
-.card-body {
-  background-color: #CED1D3;
-}
 
 .card-link {
   font-weight: bold;
@@ -199,7 +196,7 @@ time {
 }
 
 .submit {
-  font-family: 'Slabo 27px', serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1em;
   margin-bottom: 3em;
   color: white;
@@ -261,6 +258,45 @@ time {
   transform: none;
   visibility: visible;
   opacity: 1;
+}
+
+@keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+  opacity: 0
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
 }
 
 /* MEDIA QUERIES

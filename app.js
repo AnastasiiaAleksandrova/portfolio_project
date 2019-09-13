@@ -4,11 +4,12 @@ const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
 const multer = require('multer');
 const upload = multer();
+const path = require('path');
 
 
 const app = express();
 
-app.use(express.static('content'))
+app.use(express.static(path.join(__dirname, '/content/')))
 
 app.use(bodyParser.json());
 

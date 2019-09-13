@@ -1,3 +1,5 @@
+
+
 let items = document.querySelectorAll(".timeline li");
 
 function isElementInViewport(el) {
@@ -51,3 +53,4 @@ form.addEventListener("submit", function sendData(event) {
 window.addEventListener("load", callbackFunc);
 window.addEventListener("resize", callbackFunc);
 window.addEventListener("scroll", callbackFunc);
+
