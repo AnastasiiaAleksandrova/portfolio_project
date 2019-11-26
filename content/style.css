@@ -153,6 +153,10 @@ time {
   padding: 3%;
 }
 
+.row {
+  margin-top: 3%;
+}
+
 
 .card-link {
   font-weight: bold;
